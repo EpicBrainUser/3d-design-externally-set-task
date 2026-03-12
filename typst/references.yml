@@ -1,0 +1,20 @@
+rayner:
+  type: article
+  title: Cox Rayner + Arup complete worlds largest tensegrity bridge in Brisbane
+  url: https://web.archive.org/web/20091017061217/http://www.worldarchitecturenews.com/index.php?fuseaction=wanappln.projectview&upload_id=12507
+  author: [Michael Rayner]
+
+carpentieri2015minimum:
+  type: article
+  id: carpentieri2015minimum
+  title: "Minimum Mass and Optimal Complexity of Planar Tensegrity Bridges"
+  author:
+    - Carpentieri, Geradrdo
+    - Skelton, Robert E.
+    - Fraternali, Fernando
+  container-title: "International Journal of Space Structures"
+  volume: 30
+  issue: "3+4"
+  page: "221-"
+  year: 2015
+  url: "https://www.fernandofraternaliresearch.com/publications/Int_J_Space_Struct_2015.pdf"

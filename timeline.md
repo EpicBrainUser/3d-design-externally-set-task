@@ -1,7 +1,7 @@
 # Timeline for exam-set task
 ## Book structure
-- [ ] Title page
-- [ ] 2026/02/05 -- 2 \* double
+- [x] Title page
+- [x] 2026/02/05 -- 2 \* double
 - [ ] 2026/02/12 -- 2 \* double
 - [ ] 2026/02/26 -- 3 \* double
 - [ ] 2026/03/05 -- 2 \* double
