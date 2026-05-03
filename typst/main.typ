@@ -17,7 +17,7 @@
   // background: lightgray
 )[
   #align(center, text(48pt, weight: "bold")[
-    Externally set task
+    Externally set task: Connections, 'Link'
   ])
  #align(center, text(18pt, weight: "regular")[ 3d Design, exam set project ])
 ]
@@ -190,34 +190,61 @@ This type of bridge uses structures only projecting horizontally into space. The
 
 
 = Bridge location
-== Possible location: Нева River near Апраксин Двор in Санкт-Петербург (St. Petersburg)
-This is in a relatively modern tech/development zone, so would fit well as a footbridge. Here it also has to open to allow for large ships to pass the Нева river. Below I show an example of a drawbridge that opens over this river:
+// == Possible location: Нева River near Апраксин Двор in Санкт-Петербург (St. Petersburg)
+// This is in a relatively modern tech/development zone, so would fit well as a footbridge. Here it also has to open to allow for large ships to pass the Нева river. Below I show an example of a drawbridge that opens over this river:
+//
+// // give MAP location
+// // https://maps.app.goo.gl/TtY9qzsHTh1QVZk1A
+//
+// #figure(
+//   image("assets/Palace_Bridge_SPB_(img2)_Crop.jpg", width: 80%),
+//   caption: [ Разведённый Дворцовый in St. Petersburg. \
+//   #text(size: 0.85em)[Авторство: Alex 'Florstein' Fedorov, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=92957139]],
+// )
+//
+// This shows that the bridge would need to open, to as to allow for large river traffic to pass. \
+// While the bridge that I would use will certainly not be nearly as large as this (more like a footbridge, to minimize weight), the existence of this bridge shows that the bridge needs to open.
 
-// give MAP location
-// https://maps.app.goo.gl/TtY9qzsHTh1QVZk1A
-
-#figure(
-  image("assets/Palace_Bridge_SPB_(img2)_Crop.jpg", width: 80%),
-  caption: [ Разведённый Дворцовый in St. Petersburg. \
-  #text(size: 0.85em)[Авторство: Alex 'Florstein' Fedorov, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=92957139]],
-)
-
-This shows that the bridge would need to open, to as to allow for large river traffic to pass. \
-While the bridge that I would use will certainly not be nearly as large as this (more like a footbridge, to minimize weight), the existence of this bridge shows that the bridge needs to open.
-
-== Possible location: Chao Phraya River, Bankok, Thailand
+== Location: Chao Phraya River, Bankok, Thailand
 
 #figure(
   image("assets/map_location.png", width: 80%),
   caption: [Location as shown on Google Maps]
 )
 
-= Mechanical elements to a bridge
-I would wish for some mechanical elements to the bridge, and the model that I will make for the exam in the end. The obvious choice for a mechanical element for a bridge would be an opening for large ships to be able to pass. 
-The other options would changing the tension in the wires, however I don't like this as much.
+Given this specific location, a lot of details about the bridge that would fit here are given. For example, the bridge is rather short, at only 230 meters, and is a pedestrian bridge, meaning that the objective is to build the lightest structure possible. \
+Also, the bridge needs to be either tall enough or have a mechanical element to account for not blocking river traffic. The tide must be taken into account, and the height above the water must be determined. To solve the issue of the bridge deck being too low, we simply lift the deck up. 
+
+#figure(
+  image("assets/better_location.png", width: 80%),
+  caption: [Location as shown on Google Earth, Showing a 3d view]
+)
+
+== Access points
+Looking around, there are two structures on either side where a ferry leaves from to cross the river. From this, the bridge could then be raised, adding stairs to either side to help lift the deck up, and these stairs connect directly to the structures. 
+
+
+// Here are some sketches showing the options for the bridge configuration. \
+// by Mr. Murray....
+
+// #figure(
+//   rotate(90deg)[
+//     #image("assets/location-questions.jpg", width: 80%)],
+//   caption: [
+//     Sketches details that need to be resolved.
+//   ]
+// )
+
+// millenium
+// gateshead 
+// buenes arges docks dock footbridge
+//
+
+// TBA
+// = Mechanical elements to a bridge
+// I would wish for some mechanical elements to the bridge, and the model that I will make for the exam in the end. The obvious choice for a mechanical element for a bridge would be an opening for large ships to be able to pass. Perhaps a system of pulleys on the cables could be used to pull the middle section of the bridge open.
 
 = Bridge design with tensegrity
-
 == Case study: Kurilpa Bridge
 This is a pedestrian and cycle bridge in Queensland, Australia, and is the largest tensegrity bridge in the world. It is a hybrid tensegrity cable-stayed bridge.
 
@@ -317,12 +344,265 @@ I needed to design a single 'member', that I could then increase the quantity, t
 This must only use beams and cables, and support a deck. \
 Also, in the case of a nominal structure, an additional requirement would be that the cables do not obstruct traffic on the deck.\
 
-== Using a 'lens' principle to clear the deck
+// == Using a 'lens' principle to clear the deck
+//
+// If for the superstructure a harp was used, and for the substructure a star, this means that the cables must pass through the deck at some point. An option would be to imagine the cables as light rays, and the masts as lenses. Then if you place the deck at the 'focal point' this means that all the cables meet in one point, and they therefore do not obstruct traffic on the deck. 
 
-If for the superstructure a harp was used, and for the substructure a star, this means that the cables must pass through the deck at some point. An option would be to imagine the cables as light rays, and the masts as lenses. Then if you place the deck at the 'focal point' this means that all the cables meet in one point, and they therefore do not obstruct traffic on the deck. 
+== Nominal structure design ideas
+=== Relationships between the sub and super structures
+My thinking was it would be advantageous to build a nominal structure for the given location that I had, as this would allow to lower the height of the towers, which reduces some of the visual 'power' that this bridge has, as a large, 'powerful'-looking bridge would be unfitting for simply a short pedestrian bridge in a city. \
+This is because the deck would be supported from both sides, above and below. In the first sketch you can see how if a 'pure' harp design is used for both the substructure and the superstructure, this means that when you make one of the harp cables at a smaller angle to the tower, the next tower below will be taller. Since I want the substructure to be smaller than the superstructure, this may cause some problems.
+
+#figure(
+  rotate(270deg)[
+    #image("assets/nominal_sketches.pdf", width: 80%)],
+  caption: [
+    Nominal design concept sketches.
+  ]
+)
+
+=== Cable connections
+For the bridge to be supported properly and work as a cable stay bridge, a fundamental aspect is the connection to the deck specifically. This is a very clear example:
+
+#figure(
+  image("assets/Changtai_Yangtze_River_Bridge1.jpeg", width: 80%),
+  caption: [
+    Changtai Yangze River Bridge is the largest in the world with a span of 1176 meters. \
+    #text(size: 0.85em)[By Glabb - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=175622150]
+  ]
+)
+
+Look at the connections, all of the cables are connecting the pylons to the deck, whereby the deck is supported by the pylons through them. If we remove these connections and skip to just connecting the pylons to each other this undermines the purpose, so any given design _must_ have the cables support the deck. Originally I hadn't realised this and made some early models (both in software and as a model) without this crucial connection.
+
+== Ultimate choice for design for superstructure and substructure: harps for all!
+
+We connect every cable to the deck, so the sub and super structures are not linked, however we them so that they visually look like they are connected. We think this provides a more aesthetically appealing bridge, which is still a significant part of the design process.  \
+\
+However, instead of a 'traditional' harp design, the cables are deliberately not parallel, rather set up in a way where the cables look like they passing through the deck connecting from one pylon to another. The objective distances for the bottom pylons are not the same (they are smaller), but they connect to the proportionally same place as the top pythons.
+
+== Choice to size per member (and the number of members)
+=== The problem
+My design relies on the principle of designing one member that is then duplicated for as many times as it is fitting for the required length. The upper bound is not fixed , and therefore can extend up as high as may be desired. However the lower bound for the substructure is fixed as I can't have the river tide should never touch the cables.
+
+=== Argument for smaller members
+If I go for deliberately small members, and if taken to the extreme each pylon could be even as small as just a meter or two, tide isn't a problem, and the bridge looks much lighter from the point of view of the pedestrian.
+
+= Design in software (blender work)
+// geo nodes?
+
+== Overall design
+#figure(
+    image("assets/Screenshot 2026-03-19 at 12.55.25.png", width: 80%),
+    caption: [A single member]
+)
+
+This was a rather simplistic design of a member, but it allows for more room for change within the parameters, such as the height of the pylons, the distance between them, and the difference between the super and substructure sizes. I'll revisit this version.
+
+#figure(
+    image("assets/Screenshot 2026-03-19 at 12.56.46.png", width: 100%),
+    caption: [Full length of the bridge]
+)
+Here we see the issues of attempting to work on such a large model, because manufacturing the entire model would be difficult as a site model, so for my exam I will not provide a representative site model, rather providing a much more 'abridged' model, that shows the design but spans much less. This means that the concept of the design is demonstrated, while preserving detail, however the full scale is not preserved, and is left for the digital model renders.
+
+#figure(
+    image("assets/Screenshot 2026-03-19 at 12.58.05.png", width: 80%),
+    caption: [Bridge as seen from the front]
+)
+Here we see how I angled both sides of the bridge. This design choice was deliberate as the moves the pylons away from the pedestrians, and the traffic, therefore adding to the visual appeal of the bridge: because the structure obtrusive to those using the footbridge.
+
+== Thickness of cables
+
+#figure(
+   image("assets/Screenshot 2026-03-19 at 13.03.54.png", width: 80%),
+   caption: [Before changing the thickness of the cables]
+)
+As I was playing around with the scales of the bridges, it is easy to miss how the thickness of the cables also needs to change based on the size of the pylons. Since my pylons are quite small, I could afford to make the cables thin, and therefore light.
+
+#figure(
+    image("assets/Screenshot 2026-03-19 at 12.55.25.png", width: 80%),
+    caption: [A single member, after changing the thickness]
+)
+This is after changing the thickness of the cables.
+
+// #image("assets/Screenshot 2026-03-19 at 13.04.11.png", width: 80%)
+//
+// #figure(
+//   image("assets/Screenshot 2026-03-19 at 13.04.35.png", width: 80%),
+// )
+// #figure(
+//   image("assets/Screenshot 2026-03-19 at 13.04.49.png", width: 80%),
+//   caption: [Another set of screenshots showing the change in thickness.]
+// )
+
+
+#grid(
+  columns: 2, 
+  gutter: 2pt, 
+  align: center + horizon, 
+  figure(
+  image("./assets/Screenshot 2026-03-19 at 13.04.35.png", width: 90%),
+  caption: [Before adjustment],
+  ),
+  figure(
+    image("./assets/Screenshot 2026-03-19 at 13.04.49.png", width: 90%),
+    caption: [After adjustment],
+  )
+)
+
+// #image("assets/Screenshot 2026-03-19 at 13.04.49.png", width: 80%)
+== Specific choices when modelling
+
+#figure(
+  image("assets/Screenshot 2026-03-26 at 11.27.35.png", width: 100%),
+  caption: [Geometry nodes],
+)
+This is one of the geometry nodes setups that I used in the process of making my design. As shown here, I can alter a lot of parameters to change the 'feel' of the bridge, as everything is non-destructive. 
+#figure(
+  image("assets/Screenshot 2026-03-26 at 11.27.45.png", width: 80%),
+  caption: [Geometry nodes modifier to the object]
+)
 
 = Materials and manufacturing (model making)
+== Model 1
+=== Overview
+For my first model and experimentation I opted for using wood for both the pylons and for the deck. This meant that I had to manually drill a lot of small holes. I share my process.
 
+#figure(
+  image("assets/IMG_20260331_105439_047.jpg", width: 80%),
+  caption: [Clamping wooden dowels to drill holes]
+)
+
+// #image("assets/IMG_20260331_105445_634.jpg", width: 80%)
+
+#figure(
+  image("assets/IMG_20260331_105538_447.jpg", width: 80%),
+  caption: [Drilling holes],
+)
+Here one of the problems that comes about from doing it by hand is evident: drilling holes can be at times inaccurate for the angle as it's quite hard to drill directly down. 
+// #image("assets/IMG_20260331_105544_011.jpg", width: 80%)
+
+// #image("assets/IMG_20260331_105632_430.jpg", width: 80%)
+// #image("assets/IMG_20260331_105651_738.jpg", width: 80%)
+
+
+#figure(
+  image("assets/IMG_20260331_110921_874.jpg", width: 80%),
+  caption: [The front side vs the back side of a dowel]
+)
+Here's another problem: the drill leaves very noticeable exit scarring on the wood, meaning that while front looks clean, the wood breaks on the back. Fortunately I found a way to fix this for the most part. 
+#figure(
+  image("assets/IMG_20260331_115753_188.jpg", width: 80%),
+  caption: [Dowel wrapped in tape],
+)
+By wrapping the dowel in tape first, this makes the exit point from the drill a lot cleaner.
+
+#figure(
+  image("assets/IMG_20260331_123419_737.jpg", width: 80%),
+  caption: [Sacrificial piece of wood]
+)
+Here I placed another piece of wood under the one where I drill the holes so the exit is not from the piece that I'm working on. Here is how the exit looks after these changes:
+
+#figure(
+  image("assets/IMG_20260331_113913_509.jpg", width: 80%),
+  caption: [Much cleaner exit wounds]
+)
+
+#figure(
+  image("assets/IMG_20260331_111636_512.jpg", width: 80%),
+  caption: [Choice of material for cables]
+)
+When picking the type of cable for my model I had a few options: 
+- Metal wire
+- Fishing line
+- Rubber bands
+- String
+- Elastic string (thin)
+
+At first I went for the rubber bands, because they allow actual tension. In the image above you can see fishing line at the top, metal wire in the middle and the rubber band at the bottom. However the disadvantage with rubber bands is that they are non-uniform, meaning that they end up looking like this when you link the pylons together: 
+
+#figure(
+  image("assets/IMG_20260331_111021_993.jpg", width: 80%),
+  caption: [Pylons linked]
+)
+
+The process of drilling these holes was very time consuming and tedious, as I had to drill four holes per pylon, meaning for my model of two pylons I would need something like 80 holes. This was not something I was willing to do so I decided not to move forward with this model. \
+The other challenging part of assembling everything out of wood was that I would have to drill holes into the wood at 20 degrees, which would likely be inaccurate. \
+
+
+// exit wounds
+// #image("assets/IMG_20260331_113906_709.jpg", width: 80%)
+// dowels
+// #image("assets/IMG_20260331_115709_584.jpg", width: 80%)
+// #image("assets/IMG_20260331_115710_188.jpg", width: 80%)
+// #image("assets/IMG_20260331_115718_404.jpg", width: 80%)
+// #image("assets/IMG_20260331_115811_643.jpg", width: 80%)
+// #image("assets/IMG_20260331_131737_495.jpg", width: 80%)
+
+== Model 2
+After the failure of model 1, I realised that I needed something much easier to assemble, and that would look cleaner. This led me to a different approach for the single members. 
+=== Software
+==== Steel brackets
+Here I have adapted the pylons to be more like steel frames that the cables thread through. These would all attach on the underside of the 
+
+==== Piers
+At this point I realised that I also needed some piers to hold the bridge up. I looked for inspiration of other footbridges, here was an example of a pier design that I liked:
+[millenium bridge]
+I made something that was inspired by this that would attach on the bottom of an 'upper' bracket to support it. 
+=== Manufacturing
+
+#figure(
+grid(
+  columns: 2, 
+  gutter: 2pt, 
+  align: center + horizon, 
+  // figure(
+    image("assets/IMG_20260427_163624_607.jpg", width: 100%),
+    // caption: [Before adjustment],
+  // ),
+  // figure(
+    image("assets/IMG_20260427_163629_965.jpg", width: 100%),
+    // caption: [After adjustment],
+  // )
+),
+caption: [One member assembled]
+)
+Here I opted for fishing line as the connection between the pylons.
+
+#figure(
+  image("assets/IMG_20260427_163755_225.jpg", width: 80%),
+  caption: [Strain on pylon]
+)
+
+Here you can see a problem with having the frames too narrow (this was a half-finished print due to a spaghetti failure, so the part was thin). 
+If there isn't enough surface area to glue the plastic onto the balsa wood, it will be tilted out, and is unable to hold the tension of the wire. 
+
+// #figure(
+//   image("assets/IMG_20260427_163624_607.jpg", width: 80%),
+//   caption: []
+// )
+// #figure(
+//   image("assets/IMG_20260427_163629_965.jpg", width: 80%),
+// caption: []
+// )
+
+#figure(
+  image("assets/IMG_20260427_163644_086.jpg", width: 80%),
+  caption: [Section of model]
+)
+I only laced through one side of this model just to see if this was a viable option. \
+So what did I learn?\
+- For this model, the cables realistically can't take any load, so I need very light and small cables that are flexible and can be pulled tight.
+- Fishing line is difficult to keep straight
+- Pylons should be wide to ensure glue keeps them on the balsa wood. 
+- Overall, this method works to produce a decent model, therefore I will use this during the exam
+
+
+
+
+// research on acesss points, steps, curve, path
+//
+// different ways of connetion to land
+// steps that are large and tilted.
 #bibliography(
   "references.yml",
   style: "ieee",
