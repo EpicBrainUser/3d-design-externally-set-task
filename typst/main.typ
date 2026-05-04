@@ -3,24 +3,29 @@
 #show link: underline
 // #show heading: it => align(center, it) 
 
+#show title: set align(center)
 #show heading.where(level: 1): it => {
   pagebreak(weak: true)
   it
 }
 
 
-#box(
-  stroke: 2pt + black,
-  inset: 16pt,
-  width: 100%
-  // padding: 4pt,
-  // background: lightgray
-)[
-  #align(center, text(48pt, weight: "bold")[
-    Externally set task: Connections, 'Link'
-  ])
- #align(center, text(18pt, weight: "regular")[ 3d Design, exam set project ])
-]
+// #box(
+//   stroke: 2pt + black,
+//   inset: 16pt,
+//   width: 100%
+//   // padding: 4pt,
+//   // background: lightgray
+// )[
+//   #align(center, text(48pt, weight: "bold")[
+//     Externally set task: Connections, 'Link'
+//   ])
+//  #align(center, text(18pt, weight: "regular")[ 3d Design, exam set project ])
+// ]
+
+// add metadata 
+#title[ Externally set task: Connections, 'Link' ]
+// #align(center, text(18pt, weight: "regular")[3d Design, exam set project])
 
 = Initial ideas
 
@@ -33,9 +38,9 @@
 So, this is a structural principle where multiple parts push and pull on each other, in a way that they and uphold each other and maintain strength. \
 The interesting part about this is that it:
 + Distributes load
-+ Can look interesting, as it looks like under initial observation looks like it shouldn't intuitively hold up -- giving the effect that it 'floats'
++ Can look like it's floating, almost as if held by magic
 
-An obvious choice for tensegrity would be making a bridge, as many bridges rely on tensegrity for stability, as I'll explore below.
+An obvious choice for tensegrity would be making a bridge, as many bridges rely on tensegrity for stability, as I'll explore below. Here I'll look at bridges.
 
 // == Mechanical stacked skyscrapers
 // In concept, a skyscraper is simply a single layer, just repeated over and over again. \
@@ -50,6 +55,7 @@ An obvious choice for tensegrity would be making a bridge, as many bridges rely 
 
 
 = Bridge types
+Sections are only examples and are not comprehensive.
 
 == Suspension bridge
 === Overview
@@ -57,7 +63,7 @@ This type of bridge uses cables suspended from tall towers to support the bridge
 === Advantages
 Can span long distances while remaining load bearing.
 === Disadvantages
-This may prove to be challenging to make as a model that works, due to the number of bent cables.
+Since I will be making a model, this type of bridge may prove to be challenging to construct due to the slack in the cables -- which might not hold up in a model. 
 === Examples
 #figure(
   image("assets/Golden_Gate_Bridge_as_seen_from_Battery_East.jpg", width: 80%),
@@ -73,8 +79,8 @@ This may prove to be challenging to make as a model that works, due to the numbe
     #text(size: 0.85em)[By Alex.muller - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4247399]
   ]
 )
-=== Sketches
 
+#pagebreak()
 == Cable-stayed bridge
 === Overview
 This is a modern design, using taught tables attached directly to towers to support the bridge deck. Unlike suspension bridges, cable-stayed bridges have individual cables connecting the deck to the towers. \
@@ -83,6 +89,7 @@ Cable stayed bridges often have many towers that fan out to support the bridge d
 - Commonly used for long spanning crossings
 - Lower cost compared to suspension bridges
 === Disadvantages
+- Is susceptible to wind-induced oscillations during construction, and requires protection against corrosion of the cables.  
 === Examples
 #figure(
   image("assets/ViaducdeMillau.jpg", width:80%),
@@ -91,8 +98,8 @@ Cable stayed bridges often have many towers that fan out to support the bridge d
     #text(size: 0.85em)[By commons:User:Mike Switzerland - fr:Fichier:ViaducdeMillau.jpg, CC BY-SA 2.5, https://en.wikipedia.org/w/index.php?curid=35643950]
   ]
 )
-=== Sketches
 
+#pagebreak()
 == Cable-stayed arch bridge
 === Overview
 This is a hybrid design that uses cables to support the bridge deck, while the central arch provides additional stability/strength.
@@ -108,8 +115,8 @@ This is a hybrid design that uses cables to support the bridge deck, while the c
     #text(size: 0.85em)[ By Glabb - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=175806386 ]
   ]
 )
-=== Sketches
 
+#pagebreak()
 == Arch bridge
 === Overview
 Arch bridges use one or more arches as the main structural component. This is possibly the oldest type of bridge, dating back thousands of years.
@@ -119,6 +126,8 @@ An Arch bridge uses compression as the primary principle for structural integrit
 - High strength (Roman bridges still stand)
 === Disadvantages
 - Longer spans require more arches
+- More time consuming to construct
+- Requires stronger foundations
 === Examples
 #figure(
   image("assets/Rialto_Bridge_at_night2.jpg", width:80%),
@@ -127,8 +136,8 @@ An Arch bridge uses compression as the primary principle for structural integrit
     #text(size: 0.85em)[ By Livioandronico2013 - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=64280160 ]
   ]
 )
-=== Sketches
 
+#pagebreak()
 == Beam bridge
 === Overview
 The simplest type of bridge, just a crossbeam long enough for the whole span, and support from underneath.
@@ -136,7 +145,7 @@ The simplest type of bridge, just a crossbeam long enough for the whole span, an
 - Inexpensive
 - Simple
 === Disadvantages
-- Poor aesthetics
+- Poor aesthetics in urban environments
 === Examples
 #figure(
   image("assets/Donghai_Bridge.jpg", width:80%),
@@ -145,11 +154,11 @@ The simplest type of bridge, just a crossbeam long enough for the whole span, an
     #text(size: 0.85em)[ By w:User:Zhang 2008 - w:Image:Donghai Bridge.jpg, Public Domain, https://commons.wikimedia.org/w/index.php?curid=2305921 ]
   ]
 )
-=== Sketches
 
+#pagebreak()
 == Truss bridge
 === Overview
-This type of bridge uses triangular sections bound together by welded or riveted joints. The trusses are constructed vertically and horizontally which absorbs tension nd compression.
+This type of bridge uses triangular sections bound together by welded or riveted joints. The trusses are constructed vertically and horizontally which absorbs tension and compression.
 === Advantages
 - The strongest type of bridge.
 - Economical
@@ -166,8 +175,8 @@ This type of bridge uses triangular sections bound together by welded or riveted
   ]
 )
 
-=== Sketches
 
+#pagebreak()
 == Cantilever bridge
 === Overview
 This type of bridge uses structures only projecting horizontally into space. These are then supported with pillars, which then mean the cantilevers are pulled apart providing the desired structural integrity.
@@ -175,7 +184,8 @@ This type of bridge uses structures only projecting horizontally into space. The
 - Requires little to no falsework to construct -- thus can be built at difficult crossings.
 === Disadvantages
 - Complex to construct
-- More material than other bridges, and heavier
+// - More material than other bridges, and heavier
+- Unsuitable for earthquake-prone areas
 === Examples
 #figure(
   image("assets/Forth_Bridge_2022.jpg", width:80%),
@@ -184,28 +194,32 @@ This type of bridge uses structures only projecting horizontally into space. The
     #text(size: 0.85em)[ By MrMasterKeyboard - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=121262762 ]
   ]
 )
-=== Sketches
 
 
 
 
 = Bridge location
+Now I consider possible locations for where this bridge could be built, where the design would be fitting. This determines some factors, such as length, clearance and connection to banks.
+
 // == Possible location: Нева River near Апраксин Двор in Санкт-Петербург (St. Petersburg)
-// This is in a relatively modern tech/development zone, so would fit well as a footbridge. Here it also has to open to allow for large ships to pass the Нева river. Below I show an example of a drawbridge that opens over this river:
-//
-// // give MAP location
-// // https://maps.app.goo.gl/TtY9qzsHTh1QVZk1A
-//
-// #figure(
-//   image("assets/Palace_Bridge_SPB_(img2)_Crop.jpg", width: 80%),
-//   caption: [ Разведённый Дворцовый in St. Petersburg. \
-//   #text(size: 0.85em)[Авторство: Alex 'Florstein' Fedorov, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=92957139]],
-// )
-//
-// This shows that the bridge would need to open, to as to allow for large river traffic to pass. \
-// While the bridge that I would use will certainly not be nearly as large as this (more like a footbridge, to minimize weight), the existence of this bridge shows that the bridge needs to open.
+== Possible location: Neva River near Apraskin Courtyard in St. Petersburg
+This is in a relatively modern tech/development zone, so would fit well as a footbridge. Here it also has to open to allow for large ships to pass the Neva river. Below I show an example of a drawbridge that opens over this river:
+
+// give MAP location
+// https://maps.app.goo.gl/TtY9qzsHTh1QVZk1A
+
+#figure(
+  image("assets/Palace_Bridge_SPB_(img2)_Crop.jpg", width: 80%),
+  caption: [ Palace bridge in St. Petersburg. \
+  #text(size: 0.85em)[Author: Alex 'Florstein' Fedorov, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=92957139]],
+)
+
+// This shows that the bridge would need to open, to allow for large river traffic to pass. \
+While the bridge that I would use will certainly not be nearly as large as this (more like a footbridge, to minimize weight), the existence of this bridge shows that the bridge needs to open, if it were in this location. \
+Hence this location is unsuitable as my bridge would not open. 
 
 == Location: Chao Phraya River, Bankok, Thailand
+// == Location: เจ้าพระยา River, Bangkok, Thailand
 
 #figure(
   image("assets/map_location.png", width: 80%),
@@ -220,6 +234,7 @@ Also, the bridge needs to be either tall enough or have a mechanical element to 
   caption: [Location as shown on Google Earth, Showing a 3d view]
 )
 
+This is the location that I have chosen for the bridge, because there are plenty of pedestrians nearby that would use it and I deem it suitable. 
 == Access points
 Looking around, there are two structures on either side where a ferry leaves from to cross the river. From this, the bridge could then be raised, adding stairs to either side to help lift the deck up, and these stairs connect directly to the structures. 
 
@@ -245,8 +260,9 @@ Looking around, there are two structures on either side where a ferry leaves fro
 // I would wish for some mechanical elements to the bridge, and the model that I will make for the exam in the end. The obvious choice for a mechanical element for a bridge would be an opening for large ships to be able to pass. Perhaps a system of pulleys on the cables could be used to pull the middle section of the bridge open.
 
 = Bridge design with tensegrity
+Here I look at an existing bridge with tensegrity, and consider how I could integrate this into my own design.
 == Case study: Kurilpa Bridge
-This is a pedestrian and cycle bridge in Queensland, Australia, and is the largest tensegrity bridge in the world. It is a hybrid tensegrity cable-stayed bridge.
+This is a pedestrian and cycle bridge in Queensland, Australia, and is the largest tensegrity-involved bridge in the world. It is a hybrid tensegrity cable-stayed bridge, meaning it incorporates some tensegrity elements in its design.
 
 #figure(
   image("assets/KurilpaBridgeConstruction3.jpeg", width: 80%),
@@ -298,7 +314,7 @@ When designing a bridge, you must choose where to place the supporting structure
 Overall a substructure is more efficient for minimising mass.
 
 == Minimum mass until failure
-When you minimise mass, you do so until the point of failure. There are two kinds of failure:
+If you minimise mass to its limit, the structure will fail. There are two kinds of failure:
 - Yielding: when material stretches
 - Buckling: compression members fail
 
@@ -307,7 +323,7 @@ When you minimise mass, you do so until the point of failure. There are two kind
 This is the principle of subdividing a certain design: the simplest example is an arch bridge: You can have one large arch, or you have many smaller arches that support it. Now we can take this idea and apply it: what level of structural complexity is optimal for minimum mass? \
 At first, if you increase the complexity, so increasing the number of smaller triangles, each triangle takes less force, compression members get shorter, are less likely to buckle and so the mass can be reduced as they take less load. \ \
 Let's take this principle to it's logical conclusion: \
-Let n be the number of members (like triangles). As $ n -> infinity $ $ "mass" -> "theoretical minimum value" $
+Let n be the number of members (like triangles). As $ n -> infinity $ $ "mass" -> "theoretical minimum value of each member" $
 Therefore the mathematically perfect bridge would have infinite members. \
 
 #figure(
@@ -321,8 +337,11 @@ Therefore the mathematically perfect bridge would have infinite members. \
 == Joint mass
 However, with every new member, you require some joints (e.g bolts, weld plates, nodes, connectors etc. ). The more joints you have, the more the mass increases, so the structure overall is heavier. Therefore there is an optimal value for the complexity, after which more joins means more mass.\
 \
-Since the model that I would be making a model, it may be easier to investigate the practical amount of load the bridge could hold facing a hard limit for the mass, rather than attempting to calculate the optimum.
+// Since the model that I would be making a model, it may be easier to investigate the practical amount of load the bridge could hold facing a hard limit for the mass, rather than attempting to calculate the optimum.
+
+Mathematics is not constricted by physical reality, but engineering is. So rather than computing the theoretical minimum, I considered to practically investigate this minimum instead.
 = Member design
+True tensegrity in bridges is very rare, and involves the compression members completely supported by the tension members. However, most bridge designs get close to tensegrity because they rely heavily on opposition of the tension and compression forces. Hence I have opted for designing a cable-stayed bridge rather than true tensegrity. 
 == Cable-stayed bridge designs
 Cable stayed bridges have four main designs for the cable placement:
   - Mono design: this means there is only one cable per mast on the bridge.
@@ -340,7 +359,7 @@ Below I illustrate what I mean:
 
 
 == Requirements
-I needed to design a single 'member', that I could then increase the quantity, to find the optimal complexity. For this the requirement is this: I needed to find a single structure that is supportive in all axis that could bear load, but as simple as possible as the complexity would come from the amount of times you duplicate this. \
+I needed to design a single 'member', that I could then increase the quantity, to find the optimal complexity. For this the requirement is that I needed to find a single structure that is supportive in all axis that could bear load, but as simple as possible as the complexity would come from the amount of times you duplicate this. \
 This must only use beams and cables, and support a deck. \
 Also, in the case of a nominal structure, an additional requirement would be that the cables do not obstruct traffic on the deck.\
 
@@ -372,17 +391,19 @@ For the bridge to be supported properly and work as a cable stay bridge, a funda
   ]
 )
 
-Look at the connections, all of the cables are connecting the pylons to the deck, whereby the deck is supported by the pylons through them. If we remove these connections and skip to just connecting the pylons to each other this undermines the purpose, so any given design _must_ have the cables support the deck. Originally I hadn't realised this and made some early models (both in software and as a model) without this crucial connection.
-
-== Ultimate choice for design for superstructure and substructure: harps for all!
-
-We connect every cable to the deck, so the sub and super structures are not linked, however we them so that they visually look like they are connected. We think this provides a more aesthetically appealing bridge, which is still a significant part of the design process.  \
+Look at the connections, all of the cables are connecting the pylons to the deck, whereby the deck is supported by the pylons through them. If we remove these connections and skip to just connecting the pylons to each other this changes the primary design principle, so any given design _must_ have the cables support the deck in some way. \
+My design has the deck connections vertically rotated and placed underneath the deck. This supports the deck, and provides a much more aesthetically pleasing design with the echoed superstructure seen in the substructure. I considered that this would reduce the uniformity of the supports, as they are no longer placed all equally along the deck, however: this is a footbridge, the maximum load is known and limited, which allows for more freedom of design.
 \
-However, instead of a 'traditional' harp design, the cables are deliberately not parallel, rather set up in a way where the cables look like they passing through the deck connecting from one pylon to another. The objective distances for the bottom pylons are not the same (they are smaller), but they connect to the proportionally same place as the top pythons.
+So in short my design involves making the substructure a part of the deck, and the superstructure connects to it. The design would look like a harp design.
+// == Ultimate choice for design for superstructure and substructure: harps for all
+//
+// We connect every cable to the deck, so the sub and super structures are not linked, however we them so that they visually look like they are connected. We think this provides a more aesthetically appealing bridge, which is still a significant part of the design process.  \
+// \
+// However, instead of a 'traditional' harp design, the cables are deliberately not parallel, rather set up in a way where the cables look like they passing through the deck connecting from one pylon to another. The objective distances for the bottom pylons are not the same (they are smaller), but they connect to the proportionally same place as the top pythons.
 
-== Choice to size per member (and the number of members)
+== Choice of size per member (and the number of members)
 === The problem
-My design relies on the principle of designing one member that is then duplicated for as many times as it is fitting for the required length. The upper bound is not fixed , and therefore can extend up as high as may be desired. However the lower bound for the substructure is fixed as I can't have the river tide should never touch the cables.
+My design relies on the principle of designing one member that is then duplicated for as many times as it is fitting for the required length. The upper bound is not fixed, and therefore can extend up as high as may be desired. However the lower bound for the substructure is fixed as I can't have the river tide touch the cables.
 
 === Argument for smaller members
 If I go for deliberately small members, and if taken to the extreme each pylon could be even as small as just a meter or two, tide isn't a problem, and the bridge looks much lighter from the point of view of the pedestrian.
@@ -408,7 +429,7 @@ Here we see the issues of attempting to work on such a large model, because manu
     image("assets/Screenshot 2026-03-19 at 12.58.05.png", width: 80%),
     caption: [Bridge as seen from the front]
 )
-Here we see how I angled both sides of the bridge. This design choice was deliberate as the moves the pylons away from the pedestrians, and the traffic, therefore adding to the visual appeal of the bridge: because the structure obtrusive to those using the footbridge.
+Here we see how I angled both sides of the bridge. This design choice was deliberate as it moves the pylons away from the pedestrians and the traffic, therefore adding to the visual appeal of the bridge. The pylons and cables are moved away from the field of view of those looking directly forward on the bridge.
 
 == Thickness of cables
 
@@ -416,7 +437,7 @@ Here we see how I angled both sides of the bridge. This design choice was delibe
    image("assets/Screenshot 2026-03-19 at 13.03.54.png", width: 80%),
    caption: [Before changing the thickness of the cables]
 )
-As I was playing around with the scales of the bridges, it is easy to miss how the thickness of the cables also needs to change based on the size of the pylons. Since my pylons are quite small, I could afford to make the cables thin, and therefore light.
+As I was playing around with the scale of the bridge members, it was easy to miss how the thickness of the cables also needs to change based on the size of the pylons. Since my pylons are quite small, I could afford to make the cables thin, and therefore light.
 
 #figure(
     image("assets/Screenshot 2026-03-19 at 12.55.25.png", width: 80%),
@@ -456,7 +477,7 @@ This is after changing the thickness of the cables.
   image("assets/Screenshot 2026-03-26 at 11.27.35.png", width: 100%),
   caption: [Geometry nodes],
 )
-This is one of the geometry nodes setups that I used in the process of making my design. As shown here, I can alter a lot of parameters to change the 'feel' of the bridge, as everything is non-destructive. 
+This is one of the geometry nodes setups that I learned to use in the process of making my design. By designing a bridge in this way, rather than a traditional way of modelling, I had a lot more freedom to alter a lot of parameters to change the 'feel' of the bridge, as everything is non-destructive. This meant that I could better find the optimal proportions for the bridge.
 #figure(
   image("assets/Screenshot 2026-03-26 at 11.27.45.png", width: 80%),
   caption: [Geometry nodes modifier to the object]
@@ -518,15 +539,16 @@ When picking the type of cable for my model I had a few options:
 - String
 - Elastic string (thin)
 
-At first I went for the rubber bands, because they allow actual tension. In the image above you can see fishing line at the top, metal wire in the middle and the rubber band at the bottom. However the disadvantage with rubber bands is that they are non-uniform, meaning that they end up looking like this when you link the pylons together: 
+At first I went for the rubber bands, because they allow actual tension. In the image above you can see fishing line at the top, metal wire in the middle and the rubber band at the bottom. However the disadvantage with rubber bands is that they are non-uniform, meaning that they end up looking like this when you link the pylons together:  (page over)
 
 #figure(
   image("assets/IMG_20260331_111021_993.jpg", width: 80%),
   caption: [Pylons linked]
 )
 
-The process of drilling these holes was very time consuming and tedious, as I had to drill four holes per pylon, meaning for my model of two pylons I would need something like 80 holes. This was not something I was willing to do so I decided not to move forward with this model. \
+The process of drilling these holes was very time consuming and tedious, as I had to drill four holes per pylon, meaning for my model of two pylons I would need something like 80 holes. This was not something I was willing to risk, so I decided not to move forward with this model. \
 The other challenging part of assembling everything out of wood was that I would have to drill holes into the wood at 20 degrees, which would likely be inaccurate. \
+Overall, the materials that I picked were unsuitable for the model that I was attempting to make, and therefore I decided explore a different manufacturing approach.
 
 
 // exit wounds
@@ -538,16 +560,54 @@ The other challenging part of assembling everything out of wood was that I would
 // #image("assets/IMG_20260331_115811_643.jpg", width: 80%)
 // #image("assets/IMG_20260331_131737_495.jpg", width: 80%)
 
+#pagebreak()
 == Model 2
-After the failure of model 1, I realised that I needed something much easier to assemble, and that would look cleaner. This led me to a different approach for the single members. 
+I realised that I needed something much easier to assemble, and that would look cleaner. This led me to a different approach for the single members. 
 === Software
 ==== Steel brackets
-Here I have adapted the pylons to be more like steel frames that the cables thread through. These would all attach on the underside of the 
+Here I have adapted the pylons to be more like steel frames that the cables thread through. These would all attach on the underside of the deck.
+#figure(
+  image("./assets/uppder_bracket.png", width: 80%),
+  caption: [Upper bracket]
+)
+
+#figure(
+  image("./assets/lower_bracket.png", width: 80%),
+  caption: [Lower bracket]
+)
+
 
 ==== Piers
-At this point I realised that I also needed some piers to hold the bridge up. I looked for inspiration of other footbridges, here was an example of a pier design that I liked:
-[millenium bridge]
-I made something that was inspired by this that would attach on the bottom of an 'upper' bracket to support it. 
+I also needed piers to appear suitable for this kind of design. I looked for inspiration of other footbridges, here was an example of a pier design that I liked:
+#figure(
+  image("./assets/Underneath_Millennium_Bridge.jpeg", width: 80%),
+  caption: [Millenium bridge pier]
+)
+I made something that was inspired by this that would attach on the bottom of an 'upper' bracket to support it. \
+
+#figure(
+grid(
+  columns: 2, 
+  gutter: 2pt, 
+  align: center + horizon, 
+  // figure(
+    image("assets/pylon.png", width: 100%),
+    // caption: [Before adjustment],
+  // ),
+  // figure(
+    image("assets/pylon_context.png", width: 100%),
+    // caption: [After adjustment],
+  // )
+),
+caption: [Pylon in software]
+)
+
+
+#figure(
+  image("assets/pylon_attached.png", width: 80%),
+  caption: [Rough idea of attachment]
+)
+This is what the attached pier would roughly look like.
 === Manufacturing
 
 #figure(
@@ -591,7 +651,7 @@ If there isn't enough surface area to glue the plastic onto the balsa wood, it w
 )
 I only laced through one side of this model just to see if this was a viable option. \
 So what did I learn?\
-- For this model, the cables realistically can't take any load, so I need very light and small cables that are flexible and can be pulled tight.
+- For this model, the cables would not be functional (only aesthetic), so I need very light and small cables that are flexible and can be pulled tight.
 - Fishing line is difficult to keep straight
 - Pylons should be wide to ensure glue keeps them on the balsa wood. 
 - Overall, this method works to produce a decent model, therefore I will use this during the exam
