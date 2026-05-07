@@ -471,6 +471,135 @@ This is after changing the thickness of the cables.
 )
 
 // #image("assets/Screenshot 2026-03-19 at 13.04.49.png", width: 80%)
+
+// #pagebreak()
+
+== Connection to the deck
+You may have noticed that up until now I haven't connected the pylons to the deck, they are sort of just floating in place. This isn't fitting, so I needed to come up with a way of connecting the pylons to the deck in a much more secure, supportive way. 
+=== Steel brackets
+Here I have adapted the pylons to be more like steel frames that the cables thread through. These would all attach on the underside of the deck.
+#figure(
+  image("./assets/uppder_bracket.png", width: 80%),
+  caption: [Upper bracket]
+)
+
+#figure(
+  image("./assets/lower_bracket.png", width: 80%),
+  caption: [Lower bracket]
+)
+
+
+== Piers
+=== Pier design
+I also needed piers to appear suitable for this kind of design. Modern cable stayed bridges have every pylon supported by a pier, that connects it to the ground. However most bridges also have very high pylons, meaning that the distances between them are quite large. Meanwhile for my bridge, this wouldn't work so well because I need river traffic to be able to fit through easily underneath. \ 
+First, I looked for inspiration from other footbridges, here was an example of a pier design that I liked:
+#figure(
+  image("./assets/Underneath_Millennium_Bridge.jpeg", width: 80%),
+  caption: [Millennium bridge pier]
+)
+I made something that was inspired by this that would attach on the bottom of an 'upper' bracket to support it. \
+
+#figure(
+grid(
+  columns: 2, 
+  gutter: 2pt, 
+  align: center + horizon, 
+  // figure(
+    image("assets/pylon.png", width: 100%),
+    // caption: [Before adjustment],
+  // ),
+  // figure(
+    image("assets/pylon_context.png", width: 100%),
+    // caption: [After adjustment],
+  // )
+),
+caption: [Pylon in software]
+)
+=== Number of piers, Solution 1: scale everything
+As mentioned briefly above, I have the problem that: I need to have the pylons supported from underneath, like all other cable stayed bridges. If I use my current design, it would completely block the river traffic because the pylons are very small and close together. A possible solution is to scale everything, where the distances double, and therefore adding supportive pylons is a viable option. This is how this might looks:\
+#figure(
+  image("./assets/big_all.png", width: 80%),
+  caption: [Every element, enlarged by factor 2, with supportive pylons]
+)
+
+=== Number of piers, Solution 2: every other pylon
+Instead of scaling everything by two, I could just attach a pylon to every other pier, meaning that I'd have the same number of piers and position as in solution 1, just that the pylons would be shorter, and better fitting for my design. The bridge is supported in the same number of places, it is just that it is going through more loops of cable. This means that it has the same load bearing capacity. Here's how it might look:\
+#figure(
+  image("./assets/small_all.png", width: 80%),
+  caption: [Piers on every other pylon]
+)
+
+It's a bit hard to see the difference so here are the images side by side:\
+
+#figure(
+grid(
+  columns: 2, 
+  gutter: 2pt, 
+  align: center + horizon, 
+  // figure(
+    image("assets/big_all.png", width: 100%),
+    // caption: [Before adjustment],
+  // ),
+  // figure(
+    image("assets/small_all.png", width: 100%),
+    // caption: [After adjustment],
+  // )
+),
+caption: [Option for size of pylons]
+)
+
+I opted with solution 2 for my design.
+== Banks
+I also had to design appropriate connections to both banks, and apply a fitting clearance for the bridge. Here are the attachment points: which are from the two points furthest into the river. \
+
+#figure(
+  image("./assets/2026-05-07-194320_hyprshot.png", width:80%),
+  caption:[Attachment point on one side]
+)
+Since the purpose of this footbridge is to add to, or replace the ferry in place, to reduce the wait time to cross the river, there is already a structure from which the ferry leaves which we can adapt for use for our bridge.
+
+#figure(
+  image("./assets/2026-05-07-194443_hyprshot.png", width:80%),
+  caption:[Attachment from other side, looking at the other bank]
+)
+#figure(
+  image("./assets/2026-05-07-194506_hyprshot.png", width:80%),
+  caption:[Other attachment point.]
+)
+
+Here another point that needs to be highlighted is that these points are not raised very high above the waterline. 
+
+// #figure(
+//   image("./assets/2026-05-07-194544_hyprshot.png", width:80%),
+//   caption:[]
+// )
+
+
+
+Looking at the height of other bridges on this river, the clearance doesn't need to be very high, only around 6--8 meters. Since the banks are raised by only around 2--4 meters (and in some places as low as only 0.5 meters), I decided to add another 3 or so meters of height with a set of stairs on each side. This will help with the clearance to avoid impeding river traffic that passes through.
+\
+Here is what the attachment points on either end look like:
+#figure(
+  image("./assets/land_attachment_1.png", width: 80%),
+  caption: [Attachment to bank, front view]
+)
+
+#figure(
+  image("./assets/land_attachment_2.png", width: 80%),
+  caption: [Attachment to bank, rear view]
+)
+
+#figure(
+  image("./assets/land_attachment_3.png", width: 80%),
+  caption: [Attachment to other (longer) bank]
+)
+
+#figure(
+  image("./assets/attachment_render.png", width: 80%),
+  caption: [Render of attachment point]
+)
+
+#pagebreak()
 == Specific choices when modelling
 
 #figure(
@@ -479,9 +608,17 @@ This is after changing the thickness of the cables.
 )
 This is one of the geometry nodes setups that I learned to use in the process of making my design. By designing a bridge in this way, rather than a traditional way of modelling, I had a lot more freedom to alter a lot of parameters to change the 'feel' of the bridge, as everything is non-destructive. This meant that I could better find the optimal proportions for the bridge.
 #figure(
-  image("assets/Screenshot 2026-03-26 at 11.27.45.png", width: 80%),
+  image("assets/Screenshot 2026-03-26 at 11.27.45.png", width: 60%),
   caption: [Geometry nodes modifier to the object]
 )
+
+== Railings
+I noticed (much later, when rendering) that if I had just left the bridge as is, it could be terrifying to walk on because there are absolutely no railings or barriers to stop you from falling off if you're not careful. So to fix this I added a simple railing to the side of the bridge, keeping the width the same but keeping peace of mind for the pedestrians. 
+#figure(
+  image("./assets/railings_1_render.png", width: 80%),
+  caption: [Render with railings]
+)
+
 
 = Materials and manufacturing (model making)
 == Model 1
@@ -562,52 +699,24 @@ Overall, the materials that I picked were unsuitable for the model that I was at
 
 #pagebreak()
 == Model 2
-I realised that I needed something much easier to assemble, and that would look cleaner. This led me to a different approach for the single members. 
-=== Software
-==== Steel brackets
-Here I have adapted the pylons to be more like steel frames that the cables thread through. These would all attach on the underside of the deck.
-#figure(
-  image("./assets/uppder_bracket.png", width: 80%),
-  caption: [Upper bracket]
-)
-
-#figure(
-  image("./assets/lower_bracket.png", width: 80%),
-  caption: [Lower bracket]
-)
-
-
-==== Piers
-I also needed piers to appear suitable for this kind of design. I looked for inspiration of other footbridges, here was an example of a pier design that I liked:
-#figure(
-  image("./assets/Underneath_Millennium_Bridge.jpeg", width: 80%),
-  caption: [Millenium bridge pier]
-)
-I made something that was inspired by this that would attach on the bottom of an 'upper' bracket to support it. \
-
+I realised that I needed something much easier to assemble, and that would look cleaner. This led me to a different approach for the single members. I ended up taking all the brackets that I had made, and simply 3d printing them out of PLA. Then I would go on to glue the brackets to the underside of a balsa wood strip. Here I show what I mean.
 #figure(
 grid(
   columns: 2, 
   gutter: 2pt, 
   align: center + horizon, 
   // figure(
-    image("assets/pylon.png", width: 100%),
+    image("assets/L_IMG_20260507_195924_446.jpg", width: 100%),
     // caption: [Before adjustment],
   // ),
   // figure(
-    image("assets/pylon_context.png", width: 100%),
+    image("assets/L_IMG_20260507_195939_637.jpg", width: 100%),
     // caption: [After adjustment],
   // )
 ),
-caption: [Pylon in software]
+caption: [3d printed bracket]
 )
 
-
-#figure(
-  image("assets/pylon_attached.png", width: 80%),
-  caption: [Rough idea of attachment]
-)
-This is what the attached pier would roughly look like.
 === Manufacturing
 
 #figure(
@@ -654,7 +763,7 @@ So what did I learn?\
 - For this model, the cables would not be functional (only aesthetic), so I need very light and small cables that are flexible and can be pulled tight.
 - Fishing line is difficult to keep straight
 - Pylons should be wide to ensure glue keeps them on the balsa wood. 
-- Overall, this method works to produce a decent model, therefore I will use this during the exam
+- Overall, this method works to produce a good model, therefore I will use this during the exam
 
 
 
